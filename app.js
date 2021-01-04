@@ -50,21 +50,37 @@ app.post("/", async (req, res) => {
 });
 
 app.get("/:id/edit", async (req, res) => {
-  const id = req.params.id;
-  const task = await Todo.find({});
-  res.render("todoEdit", { task, idTask: id });
+  try {
+    const id = req.params.id;
+    const task = await Todo.find({});
+    res.render("todoEdit", { task, idTask: id });
+  } catch (err) {
+    res.send("something went wrong");
+  }
 });
 
 app.put("/edit/:id", async (req, res) => {
-  const id = req.params.id;
-  const newTask = await Todo.findByIdAndUpdate(id, { task: req.body.content });
-  res.redirect("/");
+  try {
+    const id = req.params.id;
+    const newTask = await Todo.findByIdAndUpdate(
+      id,
+      { task: req.body.content },
+      { runValidators: true }
+    );
+    res.redirect("/");
+  } catch (err) {
+    res.send("Something went wrong");
+  }
 });
 
 app.delete("/:id", async (req, res) => {
-  const id = req.params.id;
-  const deleteTask = await Todo.findByIdAndDelete(id);
-  res.redirect("/");
+  try {
+    const id = req.params.id;
+    const deleteTask = await Todo.findByIdAndDelete(id);
+    res.redirect("/");
+  } catch (err) {
+    res.send("something went wrong");
+  }
 });
 
 app.listen(3000, () => {
