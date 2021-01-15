@@ -19,10 +19,19 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <li>
+          <form class action="/logout" method="Post">
+            <button type="submit">Logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
     <div class="todo-container">
       <h2>To-Do List</h2>
       <div class="todo">
-        <form action="/" method="POST" class="todo-header">
+        <form action="/app" method="POST" class="todo-header">
           <input type="text" name="task" autofocus />
           <button><span class="fas fa-plus"></span></button>
         </form>
@@ -31,11 +40,11 @@
           <% task.forEach(t => { %>
           <li class="todo-list-item">
             <div class="todo-list-item-name"><%= t.task %></div>
-            <a href="/<%=t._id%>/edit" class="edit">
+            <a href="/app/<%=t._id%>/edit" class="edit">
               <span class="fas fa-edit"></span>
             </a>
 
-            <form action="/<%=t._id%>?_method=DELETE" method="POST">
+            <form action="/app/<%=t._id%>?_method=DELETE" method="POST">
               <button class="btn btn-delete">
                 <span class="fas fa-times"></span>
               </button>

@@ -29,7 +29,8 @@ body {
 }
 
 .main-link,
-.register-link {
+.register-link,
+.login-link {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
@@ -39,6 +40,8 @@ body {
   border-radius: 5px;
 }
 
-.main-link:hover {
+.main-link:hover,
+.register-link:hover,
+.login-link:hover {
   background: rgba(0, 0, 0, 0.7);
 }

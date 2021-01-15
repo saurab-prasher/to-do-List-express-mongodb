@@ -22,16 +22,16 @@
     <div class="todo-container">
       <h2>To-Do List</h2>
       <div class="todo">
-        <form action="/" class="todo-header">
+        <form action="/app" class="todo-header">
           <input type="text" name="task" disabled />
           <button><span class="fas fa-plus"></span></button>
         </form>
         <ul class="todo-list">
           <li class="todo-list-item">
-            <form action="/<%=task._id%>/?_method=PUT" method="POST">
+            <form action="/app/<%=task._id%>/?_method=PUT" method="POST">
               <input type="text" value="<%=task.task %>" name="task" />
               <button type="submit">Confirm</button>
-              <a href="/" class="cancel">Cancel</a>
+              <a href="/app" class="cancel">Cancel</a>
             </form>
           </li>
         </ul>
