@@ -22,50 +22,18 @@
     <div class="todo-container">
       <h2>To-Do List</h2>
       <div class="todo">
-        <form action="/?_method=PUT" method="POST" class="todo-header">
-          <input type="text" name="content" />
+        <form action="/" class="todo-header">
+          <input type="text" name="task" disabled />
           <button><span class="fas fa-plus"></span></button>
         </form>
-
-        <!-- <ul class="todo-list">
-          <% task.forEach(t => { %>
-          <li class="todo-list-item">
-            <div class="todo-list-item-name"><%= t.task %></div>
-            <a href="" class="edit">
-              <span class="fas fa-edit"></span>
-            </a>
-
-            <a href="" class="remove">
-              <span class="fas fa-times"></span>
-            </a>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </body>
-</html> -->
-
         <ul class="todo-list">
-          <% task.forEach(t => { %> <% if (t._id == idTask) { %>
           <li class="todo-list-item">
-            <form action="/edit/<%= t._id %>/?_method=PUT" method="POST">
-              <input type="text" value="<%= t.task %>" name="content" />
+            <form action="/<%=task._id%>/?_method=PUT" method="POST">
+              <input type="text" value="<%=task.task %>" name="task" />
               <button type="submit">Confirm</button>
               <a href="/" class="cancel">Cancel</a>
             </form>
           </li>
-          <% } else { %>
-          <li class="todo-list-item">
-            <div class="todo-list-item-name"><%= t.content %></div>
-            <a href="/<%= t._id %>/edit" class="edit">
-              <span class="fas fa-edit"></span>
-            </a>
-            <a href="/<%= t._id %>/remove" class="remove">
-              <span class="fas fa-times"></span>
-            </a>
-          </li>
-          <% } %> <% }) %>
         </ul>
       </div>
     </div>

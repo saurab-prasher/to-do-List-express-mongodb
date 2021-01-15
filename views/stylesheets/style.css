@@ -65,10 +65,10 @@ body {
   flex-direction: row;
 }
 
-.todo-list-item form {
+/* .todo-list-item form {
   width: 100%;
   display: flex;
-}
+} */
 
 .todo-list-item input {
   flex-grow: 2;
@@ -78,8 +78,14 @@ body {
   font-family: "Candal", sans-serif;
 }
 .btn-delete {
+  background: none;
+  border: none;
   color: rgb(243, 96, 96);
   cursor: pointer;
+}
+
+.todo-list-item span {
+  font-size: 1rem;
 }
 
 /* .todo-list-item button {
