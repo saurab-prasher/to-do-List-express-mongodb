@@ -5,19 +5,19 @@
 }
 
 body {
-  background: #e27442;
+  background-color: #292929;
   font-family: "Candal", sans-serif;
 }
 
 .todo-container {
-  background-color: #fff;
+  background-color: #1d1d1d;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1.25rem;
   width: 37.5rem;
-  background: rgba(0, 0, 0, 0.1);
+  min-height: 20rem;
   border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -30,16 +30,23 @@ body {
 
 .todo-container h2 {
   padding: 0.625rem;
-
+  margin-bottom: 1rem;
   font-size: 2rem;
+  color: #e2e2e2;
 }
 
 .todo-header input {
-  width: 92%;
+  width: 90%;
   border: none;
   border-radius: 5px;
   height: 1.25rem;
   font-family: "Candal", sans-serif;
+}
+.todo-header input:focus {
+  border-color: rgb(137, 44, 220);
+  box-shadow: 0 1px 1px rgba(137, 44, 220, 0.075) inset,
+    0 0 4px rgba(137, 44, 220, 0.6);
+  outline: 0 none;
 }
 
 .todo-header button {
@@ -57,18 +64,15 @@ body {
 
 .todo-list-item {
   padding: 0.625rem;
-  margin: 0.625rem;
+  margin: 0.625rem 0;
   border: none;
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.3);
+  width: 90%;
+  background-color: #892cdc;
+  color: #fff;
   display: flex;
   flex-direction: row;
 }
-
-/* .todo-list-item form {
-  width: 100%;
-  display: flex;
-} */
 
 .todo-list-item input {
   flex-grow: 2;
@@ -80,23 +84,13 @@ body {
 .btn-delete {
   background: none;
   border: none;
-  color: rgb(243, 96, 96);
+  color: rgb(243, 23, 23);
   cursor: pointer;
 }
 
 .todo-list-item span {
   font-size: 1rem;
 }
-
-/* .todo-list-item button {
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 5px;
-  font-family: "Candal", sans-serif;
-  background-color: rgb(51, 212, 100);
-} */
 
 .todo-list-item .cancel {
   color: white;
@@ -115,7 +109,7 @@ body {
 }
 
 .todo-list-item .edit {
-  color: rgb(143, 233, 58);
+  color: rgb(121, 233, 17);
   margin-right: 10px;
   cursor: pointer;
   text-decoration: none;
