@@ -15,19 +15,10 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>
-          <form class action="/logout" method="Post">
-            <button type="submit">Logout</button>
-          </form>
-        </li>
-      </ul>
-    </nav>
+    <nav></nav>
     <div class="todo-container">
       <h2>To-Do List</h2>
       <div class="todo">
@@ -35,7 +26,6 @@
           <input type="text" name="task" autofocus />
           <button><span class="fas fa-plus"></span></button>
         </form>
-
         <ul class="todo-list">
           <% task.forEach(t => { %>
           <li class="todo-list-item">
@@ -54,5 +44,8 @@
         </ul>
       </div>
     </div>
+    <form class action="/logout" method="Post">
+      <button class="btn-logout" type="submit">Logout</button>
+    </form>
   </body>
 </html>

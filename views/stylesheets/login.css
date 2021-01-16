@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #292929;
+  font-family: "Candal", sans-serif;
+}
+
+.form {
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: #fff;
+  height: 25rem;
+  min-width: 25rem;
+}
+
+.form-group {
+  padding: 2rem 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border-color: indigo;
+}
+
+.btn,
+.btn-logout {
+  cursor: pointer;
+  border: none;
+  background-color: #892cdc;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  border-radius: 5px;
+}
